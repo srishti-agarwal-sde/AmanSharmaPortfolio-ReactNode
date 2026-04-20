@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --color-off-white: #f7f5f0;
+  --color-mud-brown: #3e2a14;
+  --color-deep-green: #2c3e2e;
+  --color-soft-saffron: #d89b54;
+  --color-sky-blue: #7ba6ae;
+  --color-dark-overlay: rgba(30, 20, 10, 0.6);
+
+  --font-serif: 'Playfair Display', serif;
+  --font-script: 'Caveat', cursive;
+  --font-sans: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-off-white);
+  color: var(--color-mud-brown);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Subtle noise texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.25;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Section styling for layout */
+section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Utilities */
+.script-text {
+  font-family: var(--font-script);
+  color: var(--color-soft-saffron);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-deep-green);
+  margin-bottom: 3rem;
+  text-align: center;
+}

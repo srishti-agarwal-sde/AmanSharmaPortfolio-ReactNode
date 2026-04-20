@@ -1,0 +1,105 @@
+/* Section */
+.collaborators-section {
+  background: var(--color-deep-green);
+  padding: 6rem 0;
+  max-width: 100%;
+}
+
+/* Container */
+.collaborators-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title {
+  color: var(--color-off-white);
+}
+
+/* Grid */
+/* .collaborators-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+} */
+
+/* Card */
+.collab-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.collab-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-soft-saffron);
+}
+
+.collab-placeholder {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--color-mud-brown);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Info */
+.collab-name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--color-soft-saffron);
+}
+
+.collab-role {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-top: 6px;
+}
+
+/* Bio */
+.collab-bio {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Links */
+.collab-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.youtube-link {
+  color: #ff4747;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.instagram-link {
+  color: #e1306c;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}

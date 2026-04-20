@@ -1,0 +1,215 @@
+.music-section {
+  background-color: var(--color-deep-green);
+  color: var(--color-off-white);
+  padding: 6rem 0;
+  max-width: 100%;
+}
+
+.music-section .section-title {
+  color: var(--color-off-white);
+}
+
+.music-subheading {
+  display: block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #9ab89e;
+  margin-bottom: 0.5rem;
+}
+
+.music-heading {
+  text-align: center;
+  margin: 0 0 1.2rem 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  color: var(--color-mud-brown);
+  opacity: 0.95;
+}
+
+em {
+  font-style: italic;
+}
+
+.music-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  margin: 1.5rem auto;
+}
+
+.music-divider::before,
+.music-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--sage-light, #9ab89e);
+  opacity: 0.5;
+}
+
+.music-divider::before {
+  margin-right: 1.2rem;
+}
+
+.music-divider::after {
+  margin-left: 1.2rem;
+}
+
+.music-divider span {
+  font-size: 1.5rem;
+  color: var(--color-soft-saffron, #c4a484);
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  /* Space for buttons */
+  display: flex;
+  align-items: center;
+}
+
+.music-carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0 2rem 0;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  width: 100%;
+}
+
+.music-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.music-card {
+  flex: 0 0 calc(100% - 2rem);
+  scroll-snap-align: start;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .music-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .music-card {
+    flex: 0 0 calc(33.333% - 1.33rem);
+  }
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 ratio */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.music-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.music-info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+}
+
+.music-tag {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background-color: var(--color-soft-saffron);
+  color: var(--color-mud-brown);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-off-white);
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+  background-color: var(--color-soft-saffron);
+  color: var(--color-mud-brown);
+  border-color: var(--color-soft-saffron);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.left {
+  left: 0.5rem;
+}
+
+.carousel-btn.right {
+  right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 0 1rem;
+  }
+
+  .carousel-btn {
+    display: none;
+    /* Hide buttons on mobile where swiping is natural */
+  }
+
+  .music-carousel {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
