@@ -4,8 +4,9 @@ node_modules/
 # environment variables
 .env
 
-# media uploads
+# uploads & db
 server/uploads/
+server/database.sqlite
 
 # Logs
 logs
